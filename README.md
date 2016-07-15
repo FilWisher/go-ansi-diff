@@ -43,7 +43,7 @@ func main() {
 ## api
 
 ### ```type Differ```
-A struct to keep track of terminal state.
+A differ object. Use different Differ objects for unrelated pieces of text.
 
 ### ```func (d *Differ) Diff(input []byte) []byte```
 Takes byte array to update the terminal with. Returns ANSI control codes as byte array with changes. To apply changes to terminal, simple write the codes to a terminal (e.g. fmt.Printf(...))
